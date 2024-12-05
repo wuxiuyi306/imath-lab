@@ -1,14 +1,20 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from motor.motor_asyncio import AsyncIOMotorClient
 import redis.asyncio as redis
 from dotenv import load_dotenv
-import os
+
+from app.core.config import get_settings
+from app.core.database import db
+from app.routers import auth, knowledge
 
 # 加载环境变量
 load_dotenv()
+settings = get_settings()
 
-app = FastAPI(title="iMathLab API")
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+)
 
 # CORS设置
 app.add_middleware(
@@ -19,31 +25,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# MongoDB连接
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
-mongo_client = AsyncIOMotorClient(MONGO_URL)
-db = mongo_client.imath_db
-
 # Redis连接
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-redis_client = redis.from_url(REDIS_URL)
+redis_client = redis.from_url(settings.REDIS_URL)
 
 @app.on_event("startup")
 async def startup_db_client():
     try:
-        # 验证MongoDB连接
-        await mongo_client.admin.command('ping')
+        # 连接数据库
+        await db.connect()
         # 验证Redis连接
         await redis_client.ping()
+        print("Successfully connected to database")
     except Exception as e:
         print(f"Error connecting to database: {e}")
         raise
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
-    mongo_client.close()
+    await db.disconnect()
     await redis_client.close()
+
+# 注册路由
+app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["认证"])
+app.include_router(knowledge.router, prefix=f"{settings.API_V1_STR}/knowledge", tags=["知识点"])
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to iMathLab API"}
+    return {
+        "name": settings.PROJECT_NAME,
+        "version": "1.0.0",
+        "description": "智能数学学习平台API"
+    }
