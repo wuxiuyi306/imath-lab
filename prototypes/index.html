@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMathLab - 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-600">iMathLab</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            首页
+                        </a>
+                        <a href="knowledge.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            知识点
+                        </a>
+                        <a href="practice.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            练习
+                        </a>
+                        <a href="mistakes.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            错题本
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- 知识图谱 -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">知识图谱</h2>
+            <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg">
+                <!-- 这里将是知识图谱的可视化展示 -->
+                <div class="p-4 text-center text-gray-500">
+                    知识图谱可视化区域
+                </div>
+            </div>
+        </div>
+
+        <!-- 推荐学习 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 推荐知识点 -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">推荐知识点</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <div class="flex-1">
+                            <h3 class="text-sm font-medium text-gray-900">一元二次方程</h3>
+                            <p class="text-sm text-gray-500">基于你最近的学习进度推荐</p>
+                        </div>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                            重要
+                        </span>
+                    </div>
+                    <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                        <div class="flex-1">
+                            <h3 class="text-sm font-medium text-gray-900">相似三角形</h3>
+                            <p class="text-sm text-gray-500">与当前学习内容相关</p>
+                        </div>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                            新知识
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 推荐练习 -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">推荐练习</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                        <div class="flex-1">
+                            <h3 class="text-sm font-medium text-gray-900">错题复习 - 一元二次方程</h3>
+                            <p class="text-sm text-gray-500">基于最近错题分析</p>
+                        </div>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                            待复习
+                        </span>
+                    </div>
+                    <div class="flex items-center p-3 bg-yellow-50 rounded-lg">
+                        <div class="flex-1">
+                            <h3 class="text-sm font-medium text-gray-900">每日练习 - 相似三角形</h3>
+                            <p class="text-sm text-gray-500">巩固今日所学</p>
+                        </div>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                            新练习
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- AI助手悬浮按钮 -->
+    <div class="fixed bottom-6 right-6">
+        <button class="bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>

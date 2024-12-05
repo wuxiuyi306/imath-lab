@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMathLab - 错题本</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-600">iMathLab</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            首页
+                        </a>
+                        <a href="knowledge.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            知识点
+                        </a>
+                        <a href="practice.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            练习
+                        </a>
+                        <a href="#" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            错题本
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- 错题统计 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500 mb-1">总错题数</div>
+                <div class="text-2xl font-bold text-gray-900">48</div>
+                <div class="mt-2 flex items-center text-sm text-green-600">
+                    <span>已复习 32 题</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500 mb-1">最常错误知识点</div>
+                <div class="text-lg font-bold text-gray-900">一元二次方程</div>
+                <div class="mt-2 flex items-center text-sm text-red-600">
+                    <span>12 道相关错题</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500 mb-1">错题分布</div>
+                <div class="text-lg font-bold text-gray-900">代数 > 几何</div>
+                <div class="mt-2 flex items-center text-sm text-gray-500">
+                    <span>60% vs 40%</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500 mb-1">最近一周</div>
+                <div class="text-lg font-bold text-green-600">↓ 30%</div>
+                <div class="mt-2 flex items-center text-sm text-gray-500">
+                    <span>错题率下降</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 错题列表 -->
+        <div class="bg-white rounded-lg shadow mb-6">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-lg font-medium text-gray-900">错题列表</h2>
+                    <div class="flex space-x-2">
+                        <select class="border rounded-lg px-3 py-2 text-sm">
+                            <option>按时间排序</option>
+                            <option>按知识点排序</option>
+                            <option>按难度排序</option>
+                        </select>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600">
+                            开始复习
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 错题项目 -->
+                <div class="space-y-4">
+                    <div class="border rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-medium text-gray-900">一元二次方程 - 因式分解法</h3>
+                                <p class="text-sm text-gray-500">错误时间：2024-01-20</p>
+                            </div>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                未复习
+                            </span>
+                        </div>
+                        <div class="bg-gray-50 rounded p-4 mb-4">
+                            <p class="text-gray-700">解方程：x² - 4x + 4 = 0</p>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-500">你的答案：x = 2 或 x = -2</p>
+                                <p class="text-sm text-green-600">正确答案：x = 2（重根）</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <button class="text-blue-600 text-sm hover:text-blue-700">查看解析</button>
+                                <button class="text-gray-500 text-sm hover:text-gray-700">相关练习</button>
+                            </div>
+                            <button class="bg-green-500 text-white px-4 py-1 rounded text-sm hover:bg-green-600">
+                                标记已掌握
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-medium text-gray-900">相似三角形 - 判定定理</h3>
+                                <p class="text-sm text-gray-500">错误时间：2024-01-19</p>
+                            </div>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                已复习
+                            </span>
+                        </div>
+                        <div class="bg-gray-50 rounded p-4 mb-4">
+                            <div class="text-center text-gray-500">
+                                [图形题目展示区域]
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <button class="text-blue-600 text-sm hover:text-blue-700">查看解析</button>
+                                <button class="text-gray-500 text-sm hover:text-gray-700">相关练习</button>
+                            </div>
+                            <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded text-sm hover:bg-gray-200">
+                                已掌握
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 知识点分析 -->
+        <div class="bg-white rounded-lg shadow">
+            <div class="p-6">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">知识点分析</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">一元二次方程</span>
+                                <span class="text-sm text-gray-500">12题</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-red-500 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">相似三角形</span>
+                                <span class="text-sm text-gray-500">8题</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-500 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">分式方程</span>
+                                <span class="text-sm text-gray-500">6题</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-green-500 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- AI助手悬浮按钮 -->
+    <div class="fixed bottom-6 right-6">
+        <button class="bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>

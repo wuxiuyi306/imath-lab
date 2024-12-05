@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMathLab - 知识点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-600">iMathLab</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            首页
+                        </a>
+                        <a href="#" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            知识点
+                        </a>
+                        <a href="practice.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            练习
+                        </a>
+                        <a href="mistakes.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            错题本
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="flex gap-6">
+            <!-- 左侧知识点目录 -->
+            <div class="w-64 bg-white rounded-lg shadow p-4">
+                <div class="mb-4">
+                    <input type="text" placeholder="搜索知识点..." class="w-full px-3 py-2 border rounded-lg text-sm">
+                </div>
+                <div class="space-y-2">
+                    <div class="font-medium text-gray-900">第一章 数与式</div>
+                    <div class="ml-4 space-y-1">
+                        <div class="text-blue-600 cursor-pointer">1.1 有理数</div>
+                        <div class="text-gray-600 cursor-pointer">1.2 整式</div>
+                        <div class="text-gray-600 cursor-pointer">1.3 分式</div>
+                    </div>
+                    <div class="font-medium text-gray-900">第二章 方程与不等式</div>
+                    <div class="ml-4 space-y-1">
+                        <div class="text-gray-600 cursor-pointer">2.1 一元一次方程</div>
+                        <div class="text-gray-600 cursor-pointer">2.2 一元二次方程</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧知识点内容 -->
+            <div class="flex-1">
+                <!-- 知识点标题 -->
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-2xl font-bold text-gray-900">1.1 有理数</h1>
+                        <div class="flex items-center space-x-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                基础知识
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 知识点内容 -->
+                <div class="bg-white rounded-lg shadow mb-6">
+                    <!-- 内容导航 -->
+                    <div class="border-b">
+                        <nav class="flex -mb-px">
+                            <a href="#" class="text-blue-600 border-b-2 border-blue-500 py-4 px-6 text-sm font-medium">
+                                知识讲解
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-6 text-sm font-medium">
+                                例题解析
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-6 text-sm font-medium">
+                                要点总结
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-6 text-sm font-medium">
+                                相关练习
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-6 text-sm font-medium">
+                                相关视频
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- 内容区域 -->
+                    <div class="p-6">
+                        <div class="prose max-w-none">
+                            <h2 class="text-xl font-bold mb-4">1. 有理数的概念</h2>
+                            <p class="mb-4">有理数是指能够表示为两个整数之比的数，即可以写成 p/q（q≠0）形式的数，其中 p、q 都是整数。</p>
+                            
+                            <!-- 可视化演示 -->
+                            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                <div class="text-center text-gray-500">数轴上的有理数可视化</div>
+                            </div>
+
+                            <h2 class="text-xl font-bold mb-4">2. 有理数的性质</h2>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2">有理数是可以进行四则运算的</li>
+                                <li class="mb-2">有理数在数轴上的位置是稠密的</li>
+                                <li class="mb-2">任意两个有理数之间都存在无数个有理数</li>
+                            </ul>
+
+                            <!-- 互动演示 -->
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold mb-2">互动演示：有理数的四则运算</h3>
+                                <div class="text-center text-gray-500">
+                                    交互式计算器将在这里显示
+                                </div>
+                            </div>
+
+                            <!-- 相关视频库 -->
+                            <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                                <h3 class="text-lg font-medium text-gray-900 mb-4">相关视频</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-white rounded-lg shadow p-4">
+                                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-2">
+                                            <!-- 视频缩略图 -->
+                                        </div>
+                                        <h4 class="font-medium text-gray-900">有理数的基本概念</h4>
+                                        <p class="text-sm text-gray-500">时长：15:30</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg shadow p-4">
+                                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-2">
+                                            <!-- 视频缩略图 -->
+                                        </div>
+                                        <h4 class="font-medium text-gray-900">有理数的运算法则</h4>
+                                        <p class="text-sm text-gray-500">时长：12:45</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <button class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                                        查看更多视频 →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 相关知识点 -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">相关知识点</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-medium text-gray-900">整数</h3>
+                            <p class="text-sm text-gray-500">前置知识</p>
+                        </div>
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-medium text-gray-900">分数</h3>
+                            <p class="text-sm text-gray-500">相关概念</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- AI助手悬浮按钮 -->
+    <div class="fixed bottom-6 right-6">
+        <button class="bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
